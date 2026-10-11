@@ -1,0 +1,4 @@
+dataset,file_raw,file_clean,target_col,rows,cols,duplicates,missing_before,missing_after,rows_with_missing_after
+Pima Indians Diabetes,diabetes.csv,pima_clean.csv,Outcome,768,9,0,0,652,376
+Cleveland Heart Disease,heart_cleveland_upload.csv,cleveland_clean.csv,condition,297,14,0,0,0,0
+CDC BRFSS 2015 Health Indicators,diabetes_binary_health_indicators_BRFSS2015.csv,brfss_clean.csv,Diabetes_binary / HeartDiseaseorAttack,253680,22,24206,0,0,0

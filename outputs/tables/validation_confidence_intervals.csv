@@ -1,0 +1,21 @@
+Track,Disease,Champion_Model,Operating_Threshold,Metric,Point_Estimate,CI_Lower_95,CI_Upper_95,Bootstrap_Std,95%_Confidence_Interval,N_Resamples,Test_Set_N
+track_a,diabetes,logistic_regression,0.1473,Recall,0.7478,0.7374,0.7578,0.0052,"[0.7374, 0.7578]",1000,50736
+track_a,diabetes,logistic_regression,0.1473,F1,0.4431,0.435,0.4506,0.004,"[0.4350, 0.4506]",1000,50736
+track_a,diabetes,logistic_regression,0.1473,Precision,0.3148,0.3074,0.3216,0.0036,"[0.3074, 0.3216]",1000,50736
+track_a,diabetes,logistic_regression,0.1473,ROC_AUC,0.819,0.8142,0.8238,0.0025,"[0.8142, 0.8238]",1000,50736
+track_a,diabetes,logistic_regression,0.1473,PR_AUC,0.3916,0.3807,0.4023,0.0057,"[0.3807, 0.4023]",1000,50736
+track_a,heart,logistic_regression,0.1101,Recall,0.7554,0.7435,0.7669,0.0061,"[0.7435, 0.7669]",1000,50736
+track_a,heart,logistic_regression,0.1101,F1,0.3903,0.3812,0.3986,0.0046,"[0.3812, 0.3986]",1000,50736
+track_a,heart,logistic_regression,0.1101,Precision,0.2631,0.2555,0.27,0.0038,"[0.2555, 0.2700]",1000,50736
+track_a,heart,logistic_regression,0.1101,ROC_AUC,0.8459,0.8409,0.851,0.0026,"[0.8409, 0.8510]",1000,50736
+track_a,heart,logistic_regression,0.1101,PR_AUC,0.36,0.3463,0.3743,0.0071,"[0.3463, 0.3743]",1000,50736
+track_b,diabetes,logistic_regression,0.3318,Recall,0.7407,0.6296,0.8462,0.0593,"[0.6296, 0.8462]",1000,154
+track_b,diabetes,logistic_regression,0.3318,F1,0.643,0.5333,0.7369,0.0509,"[0.5333, 0.7369]",1000,154
+track_b,diabetes,logistic_regression,0.3318,Precision,0.5711,0.4492,0.6934,0.0604,"[0.4492, 0.6934]",1000,154
+track_b,diabetes,logistic_regression,0.3318,ROC_AUC,0.8085,0.7342,0.8689,0.0338,"[0.7342, 0.8689]",1000,154
+track_b,diabetes,logistic_regression,0.3318,PR_AUC,0.6714,0.5348,0.7929,0.0641,"[0.5348, 0.7929]",1000,154
+track_b,heart,logistic_regression,0.5672,Recall,0.7116,0.5357,0.875,0.0852,"[0.5357, 0.8750]",1000,60
+track_b,heart,logistic_regression,0.5672,F1,0.8286,0.6977,0.9333,0.059,"[0.6977, 0.9333]",1000,60
+track_b,heart,logistic_regression,0.5672,Precision,1.0,1.0,1.0,0.0,"[1.0000, 1.0000]",1000,60
+track_b,heart,logistic_regression,0.5672,ROC_AUC,0.9264,0.8495,0.9822,0.0337,"[0.8495, 0.9822]",1000,60
+track_b,heart,logistic_regression,0.5672,PR_AUC,0.9417,0.8755,0.9859,0.0283,"[0.8755, 0.9859]",1000,60

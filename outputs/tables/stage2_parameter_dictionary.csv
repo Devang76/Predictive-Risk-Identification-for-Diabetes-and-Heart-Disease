@@ -1,0 +1,14 @@
+Algorithm_or_Step,Parameter_Name,Selected_Value,Methodological_and_Clinical_Justification
+Global Environment,random_state,42,"Guarantees 100% deterministic reproducibility across K-Means, PCA, t-SNE, Isolation Forest, and train/test operations."
+Data Standardization,StandardScaler,"with_mean=True, with_std=True (z-score)","Normalizes disparate clinical scales (e.g. BMI 15-80 vs. Age brackets 1-13) to unit variance, preventing Euclidean distance distortion."
+K-Means Clustering,n_clusters (k),3,"Selected via empirical elbow knee (WCSS inflection) and peak silhouette score across k in [2, 10]; clinically maps to Low, Moderate, and High-Risk strata."
+K-Means Clustering,n_init / init,10 / 'k-means++',"Runs 10 independent centroid initializations using probabilistic distance weighting, preventing convergence to suboptimal local minima."
+DBSCAN,eps (epsilon neighborhood),2.40,Determined via sorted k-distance knee inflection point (Figure 2) on standardized feature space.
+DBSCAN,min_samples (minPts),5,Standard heuristic for d=11 features (minPts >= d + 1 or 2*d) balanced against noise point sensitivity.
+Hierarchical Clustering,linkage / metric,'ward' / 'euclidean',"Minimizes the total within-cluster variance increase at each agglomerative merge, producing compact, spherical health clusters."
+Principal Component Analysis,n_components kept,6 components (Scree 80.6% variance),Captures over 80% of cumulative population variance while reducing feature space dimensionality by 45% (Figure 6).
+t-SNE Embedding,perplexity,"30 (Benchmarked at 15, 30, 50)","Balances local manifold continuity against global cluster separation; sensitivity analysis showed high stability across [15, 50]."
+t-SNE Embedding,max_iter,1000,Sufficient gradient descent iterations for Student-t kernel optimization to achieve stable KL-divergence minimum.
+Isolation Forest,contamination,0.035 (3.5%),"Calibrated to isolate genuine severe multi-morbidity extremes (e.g. BMI > 55, 30 days impaired) without trimming valid borderline patients."
+Isolation Forest,n_estimators,150,Number of isolation trees to stabilize path length depth averaging across high-dimensional feature subsets.
+Local Outlier Factor (LOF),n_neighbors,20,Defines local density neighborhood for comparison against surrounding points; standard benchmark for tabular survey distributions.

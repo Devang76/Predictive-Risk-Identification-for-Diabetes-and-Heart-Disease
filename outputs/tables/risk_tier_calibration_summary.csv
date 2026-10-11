@@ -1,0 +1,5 @@
+Track,Disease,Champion,Baseline_Prevalence,Low_Cutoff,High_Cutoff,Train_Monotonic,Test_Monotonic,Test_Low_Prev,Test_Med_Prev,Test_High_Prev,Test_High_Lift,Test_Med_High_Positive_Capture_Pct
+track_a,diabetes,logistic_regression,0.1393,0.076,0.279,True,True,0.0269,0.1726,0.4083,2.93,90.64
+track_a,heart,logistic_regression,0.0942,0.051,0.188,True,True,0.0151,0.1136,0.336,3.57,91.32
+track_b,diabetes,logistic_regression,0.3485,0.223,0.697,True,True,0.0909,0.4833,0.6786,1.95,88.89
+track_b,heart,logistic_regression,0.4599,0.258,0.92,True,True,0.1481,0.6786,1.0,2.17,85.71

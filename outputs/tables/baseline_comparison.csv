@@ -1,0 +1,13 @@
+Track,Disease,Model_Type,Features_Used,ROC_AUC,PR_AUC,Recall,Precision,F1
+track_a,diabetes,Champion Model (Full Pipeline),All 20 features,0.819,0.3913,0.7479,0.3148,0.4431
+track_a,diabetes,Simple Baseline (3 Features),"Age, BMI, HighBP",0.7709,0.32,0.7357,0.2665,0.3913
+track_a,diabetes,Naive Majority Baseline,None (Majority Class),0.5,0.1393,0.0,0.0,0.0
+track_a,heart,Champion Model (Full Pipeline),All 20 features,0.8458,0.3594,0.7552,0.2629,0.39
+track_a,heart,Simple Baseline (3 Features),"Age, BMI, HighBP",0.7644,0.2178,0.7518,0.1857,0.2978
+track_a,heart,Naive Majority Baseline,None (Majority Class),0.5,0.0942,0.0,0.0,0.0
+track_b,diabetes,Champion Model (Full Pipeline),All 8 features,0.8081,0.6639,0.7407,0.5714,0.6452
+track_b,diabetes,Simple Baseline (3 Features),"Age, BMI, BloodPressure",0.7043,0.4952,0.5741,0.4493,0.5041
+track_b,diabetes,Naive Majority Baseline,None (Majority Class),0.5,0.3506,0.0,0.0,0.0
+track_b,heart,Champion Model (Full Pipeline),All 13 features,0.9275,0.9423,0.7143,1.0,0.8333
+track_b,heart,Simple Baseline (3 Features),"age, trestbps, chol",0.5915,0.5241,0.5,0.5385,0.5185
+track_b,heart,Naive Majority Baseline,None (Majority Class),0.5,0.4667,0.0,0.0,0.0

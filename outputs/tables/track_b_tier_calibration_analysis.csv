@@ -1,0 +1,3 @@
+Disease,Total_Cohort_N,Train_N,Test_N,Low_Threshold,High_Threshold,Train_OOF_Monotonic,Train_OOF_Low_Rate,Train_OOF_Med_Rate,Train_OOF_High_Rate,Test_Monotonic,Test_Low_Rate,Test_Med_Rate,Test_High_Rate,Test_Low_Rate_95CI,Test_Med_Rate_95CI,Test_High_Rate_95CI,Test_High_Lift,Test_Med_High_Positive_Capture_Pct,Single_Patient_Test_Pct,Single_Positive_Recall_Shift_Pct,Sample_Reliability_Verdict
+diabetes,768,614,154,0.223,0.697,True,0.0244,0.3201,0.7687,True,0.0909,0.4833,0.6786,"[0.042, 0.184]","[0.362, 0.607]","[0.493, 0.821]",1.94,88.89,0.65,1.85,Moderate
+heart,297,237,60,0.258,0.92,False,0.0,0.5215,0.0,True,0.1481,0.6786,1.0,"[0.059, 0.325]","[0.493, 0.821]","[0.566, 1.000]",2.14,85.71,1.67,3.57,Cautious (Wide CIs due to small N; relies on CV)

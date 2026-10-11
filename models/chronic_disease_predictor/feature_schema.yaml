@@ -1,0 +1,333 @@
+
+# config/feature_schema.yaml
+# Patient Input Feature Schema, Allowed Ranges, and Clinical Definitions
+# Project: Predictive Risk Identification for Diabetes and Heart Disease
+
+track_a:
+  name: "CDC BRFSS Population Survey Features (Primary Tool)"
+  description: "Survey-reported demographic, biometric, and lifestyle inputs."
+  features:
+    HighBP:
+      name: "High Blood Pressure Diagnosis"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 0
+      description: "Ever told by a doctor or health professional that you have high blood pressure (0=No, 1=Yes)."
+
+    HighChol:
+      name: "High Cholesterol Diagnosis"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 0
+      description: "Ever told by a doctor or health professional that your blood cholesterol is high (0=No, 1=Yes)."
+
+    CholCheck:
+      name: "Cholesterol Check in Past 5 Years"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 1
+      description: "Cholesterol checked by a health professional within the past 5 years (0=No, 1=Yes)."
+
+    BMI:
+      name: "Body Mass Index"
+      type: "numeric"
+      units: "kg/m²"
+      min_value: 12.0
+      max_value: 90.0
+      default: 27.0
+      description: "Weight in kilograms divided by the square of height in meters."
+
+    Smoker:
+      name: "Smoking History (>=100 Cigarettes)"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 0
+      description: "Have you smoked at least 100 cigarettes in your entire life (0=No, 1=Yes)."
+
+    Stroke:
+      name: "Stroke History"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 0
+      description: "Ever told you had a stroke (0=No, 1=Yes)."
+
+    PhysActivity:
+      name: "Physical Activity (Past 30 Days)"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 1
+      description: "Any physical activity or exercise during the past 30 days other than regular job (0=No, 1=Yes)."
+
+    Fruits:
+      name: "Fruit Consumption (>=1 per Day)"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 1
+      description: "Consumes fruit 1 or more times per day (0=No, 1=Yes)."
+
+    Veggies:
+      name: "Vegetable Consumption (>=1 per Day)"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 1
+      description: "Consumes dark green vegetables or other vegetables 1 or more times per day (0=No, 1=Yes)."
+
+    HvyAlcoholConsump:
+      name: "Heavy Alcohol Consumption"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 0
+      description: "Heavy drinkers: adult men >14 drinks/week, adult women >7 drinks/week (0=No, 1=Yes)."
+
+    AnyHealthcare:
+      name: "Healthcare Coverage"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 1
+      description: "Has any kind of health care coverage, including insurance, HMOs, or Medicare (0=No, 1=Yes)."
+
+    NoDocbcCost:
+      name: "Could Not See Doctor Due to Cost"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 0
+      description: "Was there a time in the past 12 months when you needed to see a doctor but could not due to cost (0=No, 1=Yes)."
+
+    GenHlth:
+      name: "General Health Self-Rating"
+      type: "ordinal"
+      allowed_values: [1, 2, 3, 4, 5]
+      default: 2
+      description: "Self-reported health rating: 1=Excellent, 2=Very Good, 3=Good, 4=Fair, 5=Poor."
+
+    MentHlth:
+      name: "Days of Poor Mental Health (Past 30 Days)"
+      type: "numeric"
+      units: "days/month"
+      min_value: 0
+      max_value: 30
+      default: 0
+      description: "Number of days in the past 30 days mental health (stress, depression, problems with emotions) was not good."
+
+    PhysHlth:
+      name: "Days of Poor Physical Health (Past 30 Days)"
+      type: "numeric"
+      units: "days/month"
+      min_value: 0
+      max_value: 30
+      default: 0
+      description: "Number of days in the past 30 days physical health (illness, injury) was not good."
+
+    DiffWalk:
+      name: "Difficulty Walking or Climbing Stairs"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 0
+      description: "Do you have serious difficulty walking or climbing stairs (0=No, 1=Yes)."
+
+    Sex:
+      name: "Biological Sex"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 0
+      description: "Reported biological sex: 0=Female, 1=Male."
+
+    Age:
+      name: "Age Category (5-Year Brackets)"
+      type: "ordinal"
+      allowed_values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+      default: 7
+      description: "Age bracket: 1=18-24, 2=25-29, 3=30-34, 4=35-39, 5=40-44, 6=45-49, 7=50-54, 8=55-59, 9=60-64, 10=65-69, 11=70-74, 12=75-79, 13=80+."
+
+    Education:
+      name: "Education Level Completed"
+      type: "ordinal"
+      allowed_values: [1, 2, 3, 4, 5, 6]
+      default: 5
+      description: "Education level: 1=Never attended, 2=Elementary, 3=Some high school, 4=High school grad, 5=Some college/tech, 6=College 4+ years."
+
+    Income:
+      name: "Annual Household Income Level"
+      type: "ordinal"
+      allowed_values: [1, 2, 3, 4, 5, 6, 7, 8]
+      default: 6
+      description: "Income bracket: 1=<$10k, 2=$10k-$15k, 3=$15k-$20k, 4=$20k-$25k, 5=$25k-$35k, 6=$35k-$50k, 7=$50k-$75k, 8=>=$75k."
+
+track_b_diabetes:
+  name: "UCI Pima Indians Clinical Features (Validation Track)"
+  description: "Biochemical laboratory measurements and reproductive history."
+  features:
+    Pregnancies:
+      name: "Number of Pregnancies"
+      type: "numeric"
+      min_value: 0
+      max_value: 20
+      default: 1
+      description: "Number of times pregnant (0 is biologically valid for nulliparous women)."
+
+    Glucose:
+      name: "Fasting Plasma Glucose"
+      type: "numeric"
+      units: "mg/dL"
+      min_value: 40.0
+      max_value: 300.0
+      default: 117.0
+      description: "Plasma glucose concentration at 2 hours in an oral glucose tolerance test."
+
+    BloodPressure:
+      name: "Diastolic Blood Pressure"
+      type: "numeric"
+      units: "mmHg"
+      min_value: 30.0
+      max_value: 160.0
+      default: 72.0
+      description: "Diastolic blood pressure in resting state."
+
+    SkinThickness:
+      name: "Triceps Skinfold Thickness"
+      type: "numeric"
+      units: "mm"
+      min_value: 5.0
+      max_value: 100.0
+      default: 29.0
+      description: "Triceps skin fold thickness measured via caliper."
+
+    Insulin:
+      name: "2-Hour Serum Insulin"
+      type: "numeric"
+      units: "μU/mL"
+      min_value: 10.0
+      max_value: 900.0
+      default: 125.0
+      description: "2-Hour post-load serum insulin concentration."
+
+    BMI:
+      name: "Body Mass Index"
+      type: "numeric"
+      units: "kg/m²"
+      min_value: 15.0
+      max_value: 75.0
+      default: 32.3
+      description: "Body mass index (weight in kg / (height in m)^2)."
+
+    DiabetesPedigreeFunction:
+      name: "Diabetes Pedigree Function"
+      type: "numeric"
+      min_value: 0.05
+      max_value: 3.00
+      default: 0.372
+      description: "Genetic risk scoring synthesis based on family history."
+
+    Age:
+      name: "Chronological Age"
+      type: "numeric"
+      units: "years"
+      min_value: 21
+      max_value: 100
+      default: 29
+      description: "Patient age in years."
+
+track_b_heart:
+  name: "UCI Cleveland Clinical Features (Validation Track)"
+  description: "Non-invasive diagnostic cardiac testing and angiography findings."
+  features:
+    age:
+      name: "Age in Years"
+      type: "numeric"
+      units: "years"
+      min_value: 20
+      max_value: 100
+      default: 55
+      description: "Chronological age in years."
+
+    sex:
+      name: "Biological Sex"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 1
+      description: "0=Female, 1=Male."
+
+    cp:
+      name: "Chest Pain Type"
+      type: "ordinal"
+      allowed_values: [0, 1, 2, 3]
+      default: 0
+      description: "0=Typical angina, 1=Atypical angina, 2=Non-anginal pain, 3=Asymptomatic."
+
+    trestbps:
+      name: "Resting Blood Pressure"
+      type: "numeric"
+      units: "mmHg"
+      min_value: 70
+      max_value: 240
+      default: 130
+      description: "Resting blood pressure on hospital admission."
+
+    chol:
+      name: "Serum Cholesterol"
+      type: "numeric"
+      units: "mg/dL"
+      min_value: 100
+      max_value: 600
+      default: 240
+      description: "Serum cholesterol in mg/dL."
+
+    fbs:
+      name: "Fasting Blood Sugar > 120 mg/dL"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 0
+      description: "Fasting blood sugar > 120 mg/dL (1=True, 0=False)."
+
+    restecg:
+      name: "Resting ECG Results"
+      type: "ordinal"
+      allowed_values: [0, 1, 2]
+      default: 0
+      description: "0=Normal, 1=Having ST-T wave abnormality, 2=Showing probable or definite left ventricular hypertrophy."
+
+    thalach:
+      name: "Maximum Heart Rate Achieved"
+      type: "numeric"
+      units: "bpm"
+      min_value: 60
+      max_value: 230
+      default: 150
+      description: "Maximum heart rate achieved during exercise treadmill test."
+
+    exang:
+      name: "Exercise-Induced Angina"
+      type: "binary"
+      allowed_values: [0, 1]
+      default: 0
+      description: "Exercise induced angina (1=Yes, 0=No)."
+
+    oldpeak:
+      name: "ST Depression Induced by Exercise"
+      type: "numeric"
+      units: "mm"
+      min_value: 0.0
+      max_value: 10.0
+      default: 0.8
+      description: "ST depression induced by exercise relative to rest."
+
+    slope:
+      name: "Slope of Peak Exercise ST Segment"
+      type: "ordinal"
+      allowed_values: [0, 1, 2]
+      default: 1
+      description: "0=Upsloping, 1=Flat, 2=Downsloping."
+
+    ca:
+      name: "Major Vessels Colored by Fluoroscopy"
+      type: "ordinal"
+      allowed_values: [0, 1, 2, 3]
+      default: 0
+      description: "Number of major vessels (0-3) colored by fluoroscopy."
+
+    thal:
+      name: "Thallium Stress Scintigraphy"
+      type: "ordinal"
+      allowed_values: [0, 1, 2]
+      default: 0
+      description: "0=Normal, 1=Fixed defect, 2=Reversible defect."

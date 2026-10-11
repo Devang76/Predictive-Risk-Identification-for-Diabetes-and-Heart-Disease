@@ -1,0 +1,3 @@
+Cohort_Group,Avg_BMI,Max_BMI,Avg_Age_Est,Avg_Poor_Phys_Days,Avg_Poor_Ment_Days,Hypertension_Rate_Pct,High_Cholesterol_Pct,Diabetes_Rate_Pct,Heart_Disease_Rate_Pct
+"Normal Inliers (N=4,825)",28.3,92.0,57.3,3.4,2.3,42.7,42.1,13.2,9.1
+Isolation Forest Outliers (N=175),33.4,82.0,54.8,24.9,24.1,58.3,50.3,29.7,25.1

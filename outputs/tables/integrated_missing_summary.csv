@@ -1,0 +1,14 @@
+Column,Non_Null_Count,Missing_Count,Percent_Missing,Structural_Missingness_Origin,Treatment_in_Mining
+age,26065,0,0.0,"Uniformly measured across all 3 cohorts (Pima, Cleveland, BRFSS).",Included as standard item or target in mining analysis.
+sex,26065,0,0.0,"Uniformly measured across all 3 cohorts (Pima, Cleveland, BRFSS).",Included as standard item or target in mining analysis.
+bmi,25757,308,1.18,"Measured in Pima (N=757, 11 hidden zeros) and BRFSS (N=25,000); unmeasured in Cleveland (N=297).",Discretized as BMI>=30 in BRFSS mining; Cleveland excluded from BMI rules.
+blood_pressure,1030,25035,96.05,Measured in Pima (N=733) and Cleveland (N=297); unmeasured continuously in BRFSS.,Excluded from cross-cohort rules; HighBP survey binary used in BRFSS mining.
+high_bp,26065,0,0.0,"Harmonized across all 3 cohorts: Pima (BP>=90), Cleveland (trestbps>=140), BRFSS (HighBP=1).",Used as foundational antecedent across all frequent pattern mining runs.
+cholesterol,297,25768,98.86,"Measured ONLY in Cleveland (N=297); unmeasured in Pima (N=768) and BRFSS (N=25,000).",Excluded from cross-cohort rules; HighChol survey binary used in BRFSS mining.
+high_chol,25297,768,2.95,"Available in Cleveland (N=297) and BRFSS (N=25,000); unmeasured in Pima (N=768).",Used directly in BRFSS mining; Pima rows excluded from HighChol transactions.
+glucose,763,25302,97.07,"Measured ONLY in Pima (N=763); unmeasured in Cleveland (N=297) and BRFSS (N=25,000).",Excluded from cross-cohort rules; self-reported diabetes outcome used in BRFSS.
+high_glucose,26065,0,0.0,"Harmonized: Pima (Glucose>125), Cleveland (fbs=1), BRFSS (mapped from Diabetes_binary proxy).",Flagged as operational proxy in BRFSS; removed from heatmap to avoid circularity.
+insulin,394,25671,98.49,"Measured ONLY in Pima (N=394); unmeasured in Cleveland (N=297) and BRFSS (N=25,000).",Excluded from cross-cohort rules; retained for Pima-specific clinical benchmarks.
+diabetes_outcome,26065,0,0.0,"Harmonized target across all cohorts (Pima Outcome, Cleveland fbs, BRFSS Diabetes_binary).","Used as primary consequent in diabetes rule mining on BRFSS (N=25,000)."
+heart_disease_outcome,25297,768,2.95,"Available in Cleveland (N=297) and BRFSS (N=25,000); heart disease not assessed in Pima (N=768).","Used as primary consequent in heart disease rule mining on BRFSS (N=25,000)."
+source_dataset,26065,0,0.0,"Uniformly measured across all 3 cohorts (Pima, Cleveland, BRFSS).",Included as standard item or target in mining analysis.

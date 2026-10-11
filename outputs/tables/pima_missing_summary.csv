@@ -1,0 +1,7 @@
+Variable,Zero_Placeholder_Count,Percent_Missing,Clinical_Mechanism,Imputation_Decision_and_Rationale
+Glucose,5,0.65,Fasting plasma glucose draw skipped during field evaluation.,Median imputation (117.0 mg/dL) in supervised ML. Low missingness (<1%); NaNs preserved during EDA to avoid distribution distortion.
+BloodPressure,35,4.56,Sphygmomanometer test omitted or inaudible diastolic Korotkoff sounds.,Median imputation (72.0 mmHg) with binary missing indicator in ML. Low missingness (<5%); preserves hemodynamic sample size.
+SkinThickness,227,29.56,Triceps skinfold caliper measurement omitted due to patient discomfort or protocol bypass.,"Excluded from cross-study association rules (unmeasured in BRFSS). In clinical ML, use regression/KNN imputation conditional on BMI (r=0.65) or missing indicator."
+Insulin,374,48.7,2-hour serum insulin after 75g oral glucose tolerance challenge omitted (invasive and costly).,Excluded from cross-study association rules (absent in BRFSS). Complete case deletion would destroy ~49% of cohort; use MICE / tree native handling with 'Insulin_unmeasured' flag.
+BMI,11,1.43,Weight or standing height unrecorded during clinical intake.,Median imputation (32.3 kg/m²) in predictive modeling. Low missingness (<2%); minimal risk of introducing structural distortion.
+Pregnancies,0,0.0,Valid biological zero: 111 women (14.45%) are nulliparous.,Preserved intact as true 0 without imputation; biological zero is clinically meaningful.

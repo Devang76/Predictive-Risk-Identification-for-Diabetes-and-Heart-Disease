@@ -1,0 +1,7 @@
+Feature,Count_Non_Null,Original_Mean_Std,Original_Range,MinMax_Scaled_Range,Standardized_Mean_Std,Original_Skewness,Log_Transformed_Skewness,Log_Suitability
+age,26065,56.43 ± 15.70,"[21.0, 82.0]","[0.00, 1.00]",0.00 ± 1.00,-0.36,-1.01,Contraindicated: Worsens left skew (-0.36 -> -1.01)
+bmi,25757,28.60 ± 6.66,"[12.0, 95.0]","[0.00, 1.00]",0.00 ± 1.00,2.0,0.69,Recommended: Compresses right tail (+2.00 -> +0.69)
+blood_pressure,1030,89.50 ± 30.36,"[24.0, 200.0]","[0.00, 1.00]",0.00 ± 1.00,0.91,0.34,Recommended: Stabilizes variance (+0.91 -> +0.34)
+cholesterol,297,247.35 ± 52.00,"[126.0, 564.0]","[0.00, 1.00]",0.00 ± 1.00,1.12,0.06,Recommended: Normalizes lipid distribution (+1.12 -> +0.06)
+glucose,763,121.69 ± 30.54,"[44.0, 199.0]","[0.00, 1.00]",0.00 ± 1.00,0.53,-0.06,Recommended: Achieves near-zero skewness (+0.53 -> -0.06)
+insulin,394,155.55 ± 118.78,"[14.0, 846.0]","[0.00, 1.00]",0.00 ± 1.00,2.17,-0.09,Highly Recommended: Dramatic skew reduction (+2.17 -> -0.09)

@@ -1,0 +1,5 @@
+Feature_Space,Dimensions_Retained,Variance_Retained_Pct,Silhouette_Score,Davies_Bouldin_Index,Adjusted_Rand_Index_vs_Original,Separation_Assessment
+Original Full Features (11 Dimensions),11,100.0,0.1534,2.1061,1.0,Baseline high-dimensional clustering; subject to noise and Euclidean dilution across 11 features.
+PCA Reduced Space (6 Principal Components),6,73.98,0.2046,1.7054,0.9027,Improved silhouette (+33.4%) and lower Davies-Bouldin (-19.0%); preserves 74.0% variance while eliminating collinear noise.
+PCA 2D Projection (PC1 and PC2),2,38.69,0.405,0.8625,0.7978,"Highest silhouette (0.4050) and lowest Davies-Bouldin (0.8625); sharp visual clusters, but omits 61.3% of orthogonal variance."
+t-SNE 2D Manifold Space,2,,0.407,0.8246,0.1124,Non-linear manifold unrolls local clusters (Silhouette 0.4070); modest ARI (0.11) reflects local vs global objective difference.

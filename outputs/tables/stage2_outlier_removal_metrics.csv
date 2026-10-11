@@ -1,0 +1,6 @@
+Analysis_Stage,Before_Outlier_Removal,After_Outlier_Removal,Absolute_Change,Clinical_Analytical_Interpretation
+Clustering: K-Means Silhouette Score,0.1534,0.1306,-0.0228,"Trimming extreme multi-morbidity outliers removes artificial outer dispersion, revealing dense continuous core boundaries."
+Clustering: Davies-Bouldin Index,2.1061,2.2894,0.1833,Index reflects closer proximity between adjacent risk strata once distant leverage points are pruned.
+Clustering: Calinski-Harabasz Index,860.45,729.61,-130.85,Between-cluster dispersion shifts as cluster centroids contract toward realistic population medians.
+PCA: Top 2 Components Explained Variance,38.69%,36.72%,-1.97%,Principal axes capture true general population variance rather than being skewed by isolated extreme coordinates.
+PCA: Top 6 Components Explained Variance,73.98%,72.72%,-1.25%,Variance spreads more evenly across 11 lifestyle and clinical risk factors once extreme leverage is eliminated.

@@ -1,0 +1,12 @@
+Variable,Dataset_Scope,Count_Non_Null,Mean,Median,Std_Dev,Min,Max
+Age (Years),"Integrated Cohort (N=26,065)",26065,56.43,57.0,15.7,21.0,82.0
+BMI (kg/m²),"Integrated Cohort (N=25,757)",25757,28.6,27.0,6.66,12.0,95.0
+Blood Pressure (mmHg),"Pima & Cleveland (N=1,030)",1030,89.5,78.0,30.36,24.0,200.0
+Serum Cholesterol (mg/dL),Cleveland Clinic (N=297),297,247.35,243.0,52.0,126.0,564.0
+Fasting Glucose (mg/dL),Pima Indians (N=763),763,121.69,117.0,30.54,44.0,199.0
+Serum Insulin (μU/mL),Pima Indians (N=394),394,155.55,125.0,118.78,14.0,846.0
+Skinfold Thickness (mm),Pima Indians (N=541),541,29.15,29.0,10.48,7.0,99.0
+Diabetes Pedigree Function,Pima Indians (N=768),768,0.47,0.37,0.33,0.08,2.42
+Pregnancies (Count),Pima Indians (N=768),768,3.85,3.0,3.37,0.0,17.0
+Mental Health Days (Past 30d),"CDC BRFSS Sample (N=25,000)",25000,3.16,0.0,7.37,0.0,30.0
+Physical Health Days (Past 30d),"CDC BRFSS Sample (N=25,000)",25000,4.22,0.0,8.74,0.0,30.0

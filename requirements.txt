@@ -1,0 +1,31 @@
+# requirements.txt
+# Predictive Risk Identification for Diabetes and Heart Disease
+# Pinned production and research environment dependencies
+
+# Core Numerical & Data Processing
+numpy==2.0.2
+pandas==2.3.3
+scipy==1.13.1
+
+# Machine Learning & Imbalanced Learning
+scikit-learn==1.6.1
+imbalanced-learn==0.12.4
+joblib==1.5.3
+
+# Interpretability & Explainability
+shap==0.49.1
+
+# Visualization
+matplotlib==3.9.4
+seaborn==0.13.2
+pillow==11.3.0
+
+# Configuration & Utilities
+pyyaml==6.0.3
+
+# Automated Testing
+pytest==8.4.2
+
+# Interactive Clinical Web Application
+streamlit==1.50.0
+altair==5.5.0

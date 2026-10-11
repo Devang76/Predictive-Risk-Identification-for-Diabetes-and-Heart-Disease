@@ -1,0 +1,4 @@
+Cluster_ID,Clinical_Designation,Sample_Size_N,Percent_Cohort,Avg_Age_Years,Avg_BMI,Hypertension_Rate_Pct,High_Cholesterol_Pct,Smoker_Rate_Pct,Phys_Activity_Pct,Avg_Poor_Phys_Days,Avg_Poor_Ment_Days,Diabetes_Prevalence_Pct,Heart_Disease_Pct
+Cluster 0,Cluster 0: Low-Risk / Active Young Cohort,2339,46.8,49.6,26.9,8.0,18.1,32.0,87.7,1.1,1.7,3.2,1.8
+Cluster 1,Cluster 1: Moderate-Risk / Overweight Metabolic,1956,39.1,65.7,29.5,78.3,67.6,54.7,68.8,1.5,1.1,21.6,14.4
+Cluster 2,Cluster 2: High-Risk / Elderly Multi-Morbidity,705,14.1,59.1,31.0,62.6,53.0,59.9,50.5,21.4,13.0,27.0,23.0

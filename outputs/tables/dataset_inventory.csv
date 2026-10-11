@@ -1,0 +1,9 @@
+Filename,Description,Rows,Columns,Size_MB,Selected,Reason
+diabetes.csv,UCI Pima Indians Diabetes,768,9,0.02,True,Primary clinical or survey benchmark
+heart_cleveland_upload.csv,UCI Cleveland Heart Disease,297,14,0.01,True,Primary clinical or survey benchmark
+diabetes_binary_health_indicators_BRFSS2015.csv,CDC BRFSS 2015 (Binary Outcome),253680,22,21.68,True,Primary clinical or survey benchmark
+diabetes_binary_5050split_health_indicators_BRFSS2015.csv,CDC BRFSS 2015 (50/50 Balanced Split),70692,22,6.05,False,Derivative or redundant split
+diabetes_012_health_indicators_BRFSS2015.csv,CDC BRFSS 2015 (3-Class Outcome),253680,22,21.68,False,Derivative or redundant split
+heart_2020_cleaned.csv,CDC BRFSS 2020 (Pre-cleaned),319795,18,24.02,False,Derivative or redundant split
+heart_2022_no_nans.csv,CDC BRFSS 2022 (No NaNs),246022,40,78.19,False,Derivative or redundant split
+heart_2022_with_nans.csv,CDC BRFSS 2022 (Raw with NaNs),445132,40,133.39,True,Primary clinical or survey benchmark

@@ -1,0 +1,91 @@
+# config/model_config.yaml
+# Machine Learning Track Configurations & Leakage Safeguards
+# Project: Predictive Risk Identification for Diabetes and Heart Disease
+
+global:
+  random_state: 42
+  test_size: 0.20
+  cross_validation:
+    n_splits: 5
+    shuffle: true
+    random_state: 42
+
+leakage_safeguards:
+  correlation_threshold: 0.90
+  banned_features:
+    - high_glucose
+  # CRITICAL RULE: By default, the other disease's outcome is excluded as an input feature.
+  # Rationale: When evaluating patient risk for one condition in real-world triage, the outcome
+  # of the other condition is rarely established or known. Including it as a predictor introduces
+  # clinical circularity, masks upstream lifestyle/metabolic drivers, and creates operational dependence.
+  include_cross_disease_target: false
+  cross_disease_rationale: >
+    In clinical decision support, each disease risk must be assessed from primary clinical,
+    demographic, and lifestyle measurements rather than assuming the other disease diagnosis
+    is already confirmed.
+
+tracks:
+  track_a:
+    name: "CDC BRFSS Population Survey Track (Primary Production Tool)"
+    source_file: "data/clean/brfss_clean.csv"
+    description: "Nationwide annual surveillance survey (N=253,680) covering lifestyle, demographics, and multi-morbidity."
+    diabetes:
+      target_column: "Diabetes_binary"
+      exclude_columns:
+        - "Diabetes_binary"
+        - "HeartDiseaseorAttack"
+        - "high_glucose"
+    heart_disease:
+      target_column: "HeartDiseaseorAttack"
+      exclude_columns:
+        - "HeartDiseaseorAttack"
+        - "Diabetes_binary"
+        - "high_glucose"
+    imbalance_strategy:
+      primary: "class_weight='balanced'"
+      secondary: "SMOTE (strictly encapsulated within imblearn training folds)"
+
+  track_b:
+    name: "Clinical Laboratory Benchmark Track (Validation)"
+    description: "Diagnostic clinical cohorts with continuous physical and biochemical lab assays."
+    diabetes:
+      dataset_name: "UCI Pima Indians Diabetes"
+      source_file: "data/clean/pima_clean.csv"
+      target_column: "Outcome"
+      exclude_columns:
+        - "Outcome"
+      zero_as_nan_features:
+        - "Glucose"
+        - "BloodPressure"
+        - "SkinThickness"
+        - "Insulin"
+        - "BMI"
+      valid_zero_features:
+        - "Pregnancies"
+      small_data_protocol:
+        cv_method: "RepeatedStratifiedKFold"
+        n_splits: 5
+        n_repeats: 3
+        regularization: "strict L2 / max_depth <= 4"
+    heart_disease:
+      dataset_name: "UCI Cleveland Heart Disease"
+      source_file: "data/clean/cleveland_clean.csv"
+      target_column: "condition"
+      exclude_columns:
+        - "condition"
+      small_data_protocol:
+        cv_method: "RepeatedStratifiedKFold"
+        n_splits: 5
+        n_repeats: 3
+        regularization: "strict L2 / max_depth <= 4"
+
+evaluation_metrics:
+  primary:
+    - "recall"
+    - "f1"
+    - "roc_auc"
+    - "pr_auc"
+  invalid_metric: "accuracy"
+  accuracy_exclusion_justification: >
+    With ~86% to 91% majority-class prevalence in population data, naive zero-rule
+    classifiers achieve >86% accuracy while identifying exactly zero sick patients (100% false negative rate).

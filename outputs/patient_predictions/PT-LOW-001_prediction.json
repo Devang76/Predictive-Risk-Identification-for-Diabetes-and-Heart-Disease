@@ -1,0 +1,123 @@
+{
+  "patient_id": "PT-LOW-001",
+  "input_features": {
+    "patient_id": "PT-LOW-001",
+    "name": "Sarah Miller",
+    "HighBP": 0,
+    "HighChol": 0,
+    "CholCheck": 1,
+    "BMI": 22.4,
+    "Smoker": 0,
+    "Stroke": 0,
+    "PhysActivity": 1,
+    "Fruits": 1,
+    "Veggies": 1,
+    "HvyAlcoholConsump": 0,
+    "AnyHealthcare": 1,
+    "NoDocbcCost": 0,
+    "GenHlth": 1,
+    "MentHlth": 0,
+    "PhysHlth": 0,
+    "DiffWalk": 0,
+    "Sex": 0,
+    "Age": 2,
+    "Education": 6,
+    "Income": 8
+  },
+  "modes_evaluated": [
+    "survey"
+  ],
+  "predictions": {
+    "survey": {
+      "diabetes": {
+        "disease": "diabetes",
+        "track": "track_a",
+        "champion_model": "logistic_regression",
+        "calibrated_probability": 0.0053,
+        "risk_tier": "Low",
+        "low_cutoff": 0.076,
+        "high_cutoff": 0.279,
+        "top_risk_increasers": [
+          {
+            "feature": "HvyAlcoholConsump",
+            "raw_value": 0,
+            "formatted_reading": "No",
+            "shap_value": 0.03797324742545288
+          },
+          {
+            "feature": "PhysHlth",
+            "raw_value": 0.0,
+            "formatted_reading": "0 days",
+            "shap_value": 0.028322952302050508
+          },
+          {
+            "feature": "MentHlth",
+            "raw_value": 0.0,
+            "formatted_reading": "0 days",
+            "shap_value": 0.012189444351200394
+          }
+        ],
+        "top_risk_decreasers": [
+          {
+            "feature": "Age",
+            "raw_value": 2,
+            "formatted_reading": "25-29",
+            "shap_value": -0.9794364104059878
+          },
+          {
+            "feature": "GenHlth",
+            "raw_value": 1,
+            "formatted_reading": "Excellent",
+            "shap_value": -0.8446598135063809
+          }
+        ],
+        "waterfall_plot": "outputs/patient_predictions/PT-LOW-001_survey_track_a_diabetes_waterfall.png"
+      },
+      "heart_disease": {
+        "disease": "heart",
+        "track": "track_a",
+        "champion_model": "logistic_regression",
+        "calibrated_probability": 0.0014,
+        "risk_tier": "Low",
+        "low_cutoff": 0.051,
+        "high_cutoff": 0.188,
+        "top_risk_increasers": [
+          {
+            "feature": "HvyAlcoholConsump",
+            "raw_value": 0,
+            "formatted_reading": "No",
+            "shap_value": 0.0263966251274972
+          },
+          {
+            "feature": "CholCheck",
+            "raw_value": 1,
+            "formatted_reading": "Yes",
+            "shap_value": 0.01076427279772582
+          },
+          {
+            "feature": "PhysActivity",
+            "raw_value": 1,
+            "formatted_reading": "Yes",
+            "shap_value": 0.009414697360642217
+          }
+        ],
+        "top_risk_decreasers": [
+          {
+            "feature": "Age",
+            "raw_value": 2,
+            "formatted_reading": "25-29",
+            "shap_value": -1.7627662658835277
+          },
+          {
+            "feature": "GenHlth",
+            "raw_value": 1,
+            "formatted_reading": "Excellent",
+            "shap_value": -0.7442038911797098
+          }
+        ],
+        "waterfall_plot": "outputs/patient_predictions/PT-LOW-001_survey_track_a_heart_waterfall.png"
+      }
+    }
+  },
+  "disclaimer": "These are key contributing factors from a statistical model, not proven causes, and this is not a medical diagnosis."
+}

@@ -1,0 +1,19 @@
+Dataset,Variable,Missing_Count,Percent_Missing,Likely_Reason,Planned_Handling
+CDC Heart 2022 (Sampled),TetanusLast10Tdap,82516,18.54,Unrecalled immunization history,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),PneumoVaxEver,77040,17.31,Unrecalled immunization history,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),HIVTesting,66127,14.86,Refused / Don't know / Skipped survey question,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),ChestScan,56046,12.59,Refused / Don't know / Skipped survey question,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),CovidPos,50764,11.4,Refused / Don't know / Skipped survey question,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),HighRiskLastYear,50623,11.37,Refused / Don't know / Skipped survey question,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),BMI,48806,10.96,Skipped self-reported body dimensions,Median Imputation
+CDC Heart 2022 (Sampled),FluVaxLast12,47121,10.59,Unrecalled immunization history,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),AlcoholDrinkers,46574,10.46,Refused / Don't know / Skipped survey question,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),WeightInKilograms,42078,9.45,Skipped self-reported body dimensions,Median Imputation
+CDC Heart 2022 (Sampled),ECigaretteUsage,35660,8.01,Refused / Don't know / Skipped survey question,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),SmokerStatus,35462,7.97,Refused / Don't know / Skipped survey question,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),HeightInMeters,28652,6.44,Skipped self-reported body dimensions,Median Imputation
+CDC Heart 2022 (Sampled),DifficultyErrands,25656,5.76,Refused / Don't know / Skipped survey question,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),DifficultyConcentrating,24240,5.45,Refused / Don't know / Skipped survey question,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),DifficultyWalking,24012,5.39,Refused / Don't know / Skipped survey question,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),DifficultyDressingBathing,23915,5.37,Refused / Don't know / Skipped survey question,Mode Imputation / 'Not Reported' Category
+CDC Heart 2022 (Sampled),HadHeartAttack,3065,0.69,Unanswered primary outcome,Drop Missing Target Rows (0.69%)

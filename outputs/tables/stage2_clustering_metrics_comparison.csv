@@ -1,0 +1,4 @@
+Clustering_Method,Number_of_Clusters,Noise_Points_Count,Silhouette_Score,Davies_Bouldin_Index,Calinski_Harabasz_Index,Adjusted_Rand_Index_vs_KMeans
+K-Means (k=3),3,0,0.1534,2.1061,860.45,1.0
+"Hierarchical Agglomerative (Ward, k=3)",3,0,0.1193,2.3281,691.89,0.4758
+"DBSCAN (eps=2.4, minPts=5)",4,166,0.2578,1.0105,23.91,0.0589

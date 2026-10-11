@@ -1,0 +1,5 @@
+Dataset_Track,Total_Rows,Features_N,Train_Rows,Train_Pos_Rate_Pct,Test_Rows,Test_Pos_Rate_Pct,Stratification_Delta_Pct
+track_a_diabetes,253680,20,202944,13.93,50736,13.93,0.0005
+track_a_heart,253680,20,202944,9.42,50736,9.42,0.001
+track_b_diabetes,768,8,614,34.85,154,35.06,0.2115
+track_b_heart,297,13,237,45.99,60,46.67,0.6751

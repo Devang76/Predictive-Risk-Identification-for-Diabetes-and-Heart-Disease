@@ -1,0 +1,123 @@
+{
+  "patient_id": "PT-HIGH-003",
+  "input_features": {
+    "patient_id": "PT-HIGH-003",
+    "name": "Robert Evans",
+    "HighBP": 1,
+    "HighChol": 1,
+    "CholCheck": 1,
+    "BMI": 38.0,
+    "Smoker": 1,
+    "Stroke": 0,
+    "PhysActivity": 0,
+    "Fruits": 0,
+    "Veggies": 1,
+    "HvyAlcoholConsump": 0,
+    "AnyHealthcare": 1,
+    "NoDocbcCost": 1,
+    "GenHlth": 5,
+    "MentHlth": 10,
+    "PhysHlth": 20,
+    "DiffWalk": 1,
+    "Sex": 1,
+    "Age": 10,
+    "Education": 3,
+    "Income": 3
+  },
+  "modes_evaluated": [
+    "survey"
+  ],
+  "predictions": {
+    "survey": {
+      "diabetes": {
+        "disease": "diabetes",
+        "track": "track_a",
+        "champion_model": "logistic_regression",
+        "calibrated_probability": 0.755,
+        "risk_tier": "High",
+        "low_cutoff": 0.076,
+        "high_cutoff": 0.279,
+        "top_risk_increasers": [
+          {
+            "feature": "GenHlth",
+            "raw_value": 5,
+            "formatted_reading": "Poor",
+            "shap_value": 1.5016174462335659
+          },
+          {
+            "feature": "BMI",
+            "raw_value": 38.0,
+            "formatted_reading": "38.0 kg/m\u00b2",
+            "shap_value": 0.68557857693332
+          },
+          {
+            "feature": "HighBP",
+            "raw_value": 1,
+            "formatted_reading": "Yes",
+            "shap_value": 0.37975084094325007
+          }
+        ],
+        "top_risk_decreasers": [
+          {
+            "feature": "PhysHlth",
+            "raw_value": 20.0,
+            "formatted_reading": "20 days",
+            "shap_value": -0.09868580241566481
+          },
+          {
+            "feature": "MentHlth",
+            "raw_value": 10.0,
+            "formatted_reading": "10 days",
+            "shap_value": -0.03165747777541972
+          }
+        ],
+        "waterfall_plot": "outputs/patient_predictions/PT-HIGH-003_survey_track_a_diabetes_waterfall.png"
+      },
+      "heart_disease": {
+        "disease": "heart",
+        "track": "track_a",
+        "champion_model": "logistic_regression",
+        "calibrated_probability": 0.6504,
+        "risk_tier": "High",
+        "low_cutoff": 0.051,
+        "high_cutoff": 0.188,
+        "top_risk_increasers": [
+          {
+            "feature": "GenHlth",
+            "raw_value": 5,
+            "formatted_reading": "Poor",
+            "shap_value": 1.2947108791756594
+          },
+          {
+            "feature": "Age",
+            "raw_value": 10,
+            "formatted_reading": "65-69",
+            "shap_value": 0.46858343776650735
+          },
+          {
+            "feature": "Sex",
+            "raw_value": 1,
+            "formatted_reading": "Male",
+            "shap_value": 0.44781338328268117
+          }
+        ],
+        "top_risk_decreasers": [
+          {
+            "feature": "Stroke",
+            "raw_value": 0,
+            "formatted_reading": "No",
+            "shap_value": -0.03425819087542161
+          },
+          {
+            "feature": "PhysActivity",
+            "raw_value": 0,
+            "formatted_reading": "No",
+            "shap_value": -0.029813208308700347
+          }
+        ],
+        "waterfall_plot": "outputs/patient_predictions/PT-HIGH-003_survey_track_a_heart_waterfall.png"
+      }
+    }
+  },
+  "disclaimer": "These are key contributing factors from a statistical model, not proven causes, and this is not a medical diagnosis."
+}

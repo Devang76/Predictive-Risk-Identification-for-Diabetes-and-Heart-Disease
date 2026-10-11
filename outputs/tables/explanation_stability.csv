@@ -1,0 +1,3 @@
+Track,Disease,Model_Tested,Seed_1,Seed_2,N_Evaluated_Patients,Mean_Top3_Overlap_Pct,Mean_Jaccard_Similarity,Overlap_Stability_Verdict
+track_a,diabetes,RandomForestClassifier,42,101,200,92.83,0.8925,Pass (High attribution stability >= 80%)
+track_a,heart,RandomForestClassifier,42,101,200,91.17,0.8685,Pass (High attribution stability >= 80%)

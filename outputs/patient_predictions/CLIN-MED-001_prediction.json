@@ -1,0 +1,124 @@
+{
+  "patient_id": "CLIN-MED-001",
+  "input_features": {
+    "patient_id": "CLIN-MED-001",
+    "name": "Marcus Johnson",
+    "Glucose": 125.0,
+    "BloodPressure": 76.0,
+    "BMI": 28.4,
+    "Pregnancies": 0,
+    "Insulin": 110.0,
+    "SkinThickness": 28.0,
+    "DiabetesPedigreeFunction": 0.42,
+    "Age": 48,
+    "age": 48,
+    "sex": 1,
+    "cp": 2,
+    "trestbps": 132.0,
+    "chol": 235.0,
+    "fbs": 0,
+    "restecg": 1,
+    "thalach": 142.0,
+    "exang": 0,
+    "oldpeak": 1.2,
+    "slope": 1,
+    "ca": 1,
+    "thal": 1
+  },
+  "modes_evaluated": [
+    "clinical"
+  ],
+  "predictions": {
+    "clinical": {
+      "diabetes": {
+        "disease": "diabetes",
+        "track": "track_b",
+        "champion_model": "logistic_regression",
+        "calibrated_probability": 0.2233,
+        "risk_tier": "Medium",
+        "low_cutoff": 0.223,
+        "high_cutoff": 0.697,
+        "top_risk_increasers": [
+          {
+            "feature": "Age",
+            "raw_value": 48.0,
+            "formatted_reading": "48 years",
+            "shap_value": 0.20467689665435698
+          },
+          {
+            "feature": "Glucose",
+            "raw_value": 125.0,
+            "formatted_reading": "125 mg/dL",
+            "shap_value": 0.18372429603001375
+          },
+          {
+            "feature": "BloodPressure",
+            "raw_value": 76.0,
+            "formatted_reading": "76 mmHg",
+            "shap_value": 0.005011473495439558
+          }
+        ],
+        "top_risk_decreasers": [
+          {
+            "feature": "Pregnancies",
+            "raw_value": 0.0,
+            "formatted_reading": "0",
+            "shap_value": -0.4095689655710095
+          },
+          {
+            "feature": "BMI",
+            "raw_value": 28.4,
+            "formatted_reading": "28.4 kg/m\u00b2",
+            "shap_value": -0.36303880352785894
+          }
+        ],
+        "waterfall_plot": "outputs/patient_predictions/CLIN-MED-001_clinical_track_b_diabetes_waterfall.png"
+      },
+      "heart_disease": {
+        "disease": "heart",
+        "track": "track_b",
+        "champion_model": "logistic_regression",
+        "calibrated_probability": 0.5093,
+        "risk_tier": "Medium",
+        "low_cutoff": 0.258,
+        "high_cutoff": 0.92,
+        "top_risk_increasers": [
+          {
+            "feature": "ca",
+            "raw_value": 1,
+            "formatted_reading": "1 vessels",
+            "shap_value": 0.11298245755419525
+          },
+          {
+            "feature": "sex",
+            "raw_value": 1,
+            "formatted_reading": "Male",
+            "shap_value": 0.09276439301948439
+          },
+          {
+            "feature": "thalach",
+            "raw_value": 142.0,
+            "formatted_reading": "142 bpm",
+            "shap_value": 0.08610858396926889
+          }
+        ],
+        "top_risk_decreasers": [
+          {
+            "feature": "exang",
+            "raw_value": 0,
+            "formatted_reading": "No",
+            "shap_value": -0.1311369636323061
+          },
+          {
+            "feature": "age",
+            "raw_value": 48.0,
+            "formatted_reading": "48 years",
+            "shap_value": -0.05769838401866795
+          }
+        ],
+        "waterfall_plot": "outputs/patient_predictions/CLIN-MED-001_clinical_track_b_heart_waterfall.png"
+      }
+    }
+  },
+  "disclaimer": "These are key contributing factors from a statistical model, not proven causes, and this is not a medical diagnosis."
+}

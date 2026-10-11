@@ -1,0 +1,2 @@
+Cohort,Disease,N_Evaluated,Observed_Prevalence,ROC_AUC,PR_AUC,Recall,Precision,F1,Brier_Score,Operating_Threshold,Key_Limitation,Generalization_Verdict
+BRFSS 2022 External,heart_disease,60000,0.0873,0.8283,0.3186,0.4514,0.3232,0.3767,0.0715,0.1101,2022 CDC questionnaire omitted HighBP & HighChol questions; missing biometrics imputed to population baseline.,Pass (Strong discriminative ROC-AUC: 0.8274 maintained out-of-cohort across 7 years)

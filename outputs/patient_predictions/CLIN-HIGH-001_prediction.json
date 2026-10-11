@@ -1,0 +1,112 @@
+{
+  "patient_id": "CLIN-HIGH-001",
+  "input_features": {
+    "patient_id": "CLIN-HIGH-001",
+    "name": "David Martinez",
+    "Glucose": 185.0,
+    "BloodPressure": 90.0,
+    "BMI": 38.5,
+    "Pregnancies": 0,
+    "Insulin": 220.0,
+    "SkinThickness": 42.0,
+    "DiabetesPedigreeFunction": 0.85,
+    "Age": 62,
+    "age": 62,
+    "sex": 1,
+    "cp": 3,
+    "trestbps": 160.0,
+    "chol": 290.0,
+    "fbs": 1,
+    "restecg": 2,
+    "thalach": 115.0,
+    "exang": 1,
+    "oldpeak": 2.8,
+    "slope": 1,
+    "ca": 2,
+    "thal": 2
+  },
+  "modes_evaluated": [
+    "clinical"
+  ],
+  "predictions": {
+    "clinical": {
+      "diabetes": {
+        "disease": "diabetes",
+        "track": "track_b",
+        "champion_model": "logistic_regression",
+        "calibrated_probability": 0.9149,
+        "risk_tier": "High",
+        "low_cutoff": 0.223,
+        "high_cutoff": 0.697,
+        "top_risk_increasers": [
+          {
+            "feature": "Glucose",
+            "raw_value": 185.0,
+            "formatted_reading": "185 mg/dL",
+            "shap_value": 2.2326941402309104
+          },
+          {
+            "feature": "BMI",
+            "raw_value": 38.5,
+            "formatted_reading": "38.5 kg/m\u00b2",
+            "shap_value": 0.5239210212499287
+          },
+          {
+            "feature": "Age",
+            "raw_value": 62.0,
+            "formatted_reading": "62 years",
+            "shap_value": 0.42854225237005994
+          }
+        ],
+        "top_risk_decreasers": [
+          {
+            "feature": "Pregnancies",
+            "raw_value": 0.0,
+            "formatted_reading": "0",
+            "shap_value": -0.4095689655710095
+          }
+        ],
+        "waterfall_plot": "outputs/patient_predictions/CLIN-HIGH-001_clinical_track_b_diabetes_waterfall.png"
+      },
+      "heart_disease": {
+        "disease": "heart",
+        "track": "track_b",
+        "champion_model": "logistic_regression",
+        "calibrated_probability": 0.979,
+        "risk_tier": "High",
+        "low_cutoff": 0.258,
+        "high_cutoff": 0.92,
+        "top_risk_increasers": [
+          {
+            "feature": "ca",
+            "raw_value": 2,
+            "formatted_reading": "2 vessels",
+            "shap_value": 0.37573235884302164
+          },
+          {
+            "feature": "thalach",
+            "raw_value": 115.0,
+            "formatted_reading": "115 bpm",
+            "shap_value": 0.32431880601540214
+          },
+          {
+            "feature": "thal",
+            "raw_value": 2,
+            "formatted_reading": "Reversible defect",
+            "shap_value": 0.29536476512368176
+          }
+        ],
+        "top_risk_decreasers": [
+          {
+            "feature": "fbs",
+            "raw_value": 1,
+            "formatted_reading": ">120 mg/dL",
+            "shap_value": -0.03464830617340396
+          }
+        ],
+        "waterfall_plot": "outputs/patient_predictions/CLIN-HIGH-001_clinical_track_b_heart_waterfall.png"
+      }
+    }
+  },
+  "disclaimer": "These are key contributing factors from a statistical model, not proven causes, and this is not a medical diagnosis."
+}

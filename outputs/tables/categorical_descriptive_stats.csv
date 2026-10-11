@@ -1,0 +1,39 @@
+Variable,Category,Count,Percent
+Sex (Biological),Female,14808,56.81
+Sex (Biological),Male,11257,43.19
+HighBP (Hypertension),No (Normal BP),15073,57.83
+HighBP (Hypertension),Yes (High BP),10992,42.17
+HighChol (Cholesterol),No (Normal),14465,57.18
+HighChol (Cholesterol),Yes (High Chol),10832,42.82
+Smoker (>=100 Cigs),No Smoker,13910,55.64
+Smoker (>=100 Cigs),Smoker,11090,44.36
+PhysActivity (Past 30d),No Activity,6037,24.15
+PhysActivity (Past 30d),Active,18963,75.85
+Fruits (>=1/day),No Fruit,9180,36.72
+Fruits (>=1/day),Fruit Consumer,15820,63.28
+Veggies (>=1/day),No Veggies,4733,18.93
+Veggies (>=1/day),Veggie Consumer,20267,81.07
+DiffWalk (Difficulty Walking),No Difficulty,20778,83.11
+DiffWalk (Difficulty Walking),Mobility Limited,4222,16.89
+Stroke History,No Stroke,23998,95.99
+Stroke History,History of Stroke,1002,4.01
+GenHlth (Self-Reported),1: Excellent,4471,17.88
+GenHlth (Self-Reported),2: Very Good,8797,35.19
+GenHlth (Self-Reported),3: Good,7409,29.64
+GenHlth (Self-Reported),4: Fair,3123,12.49
+GenHlth (Self-Reported),5: Poor,1200,4.8
+Income Level Bracket,1: <$10k,930,3.72
+Income Level Bracket,2: $10k-$15k,1176,4.7
+Income Level Bracket,3: $15k-$20k,1609,6.44
+Income Level Bracket,4: $20k-$25k,1928,7.71
+Income Level Bracket,5: $25k-$35k,2540,10.16
+Income Level Bracket,6: $35k-$50k,3646,14.58
+Income Level Bracket,7: $50k-$75k,4250,17.0
+Income Level Bracket,8: >$75k,8921,35.68
+Diabetes Outcome,No Diabetes,22304,85.57
+Diabetes Outcome,Diabetes,3761,14.43
+Heart Disease Outcome,No Heart Disease,22794,90.11
+Heart Disease Outcome,Heart Disease,2503,9.89
+Source Dataset,CDC BRFSS 2015 (Survey),25000,95.91
+Source Dataset,Cleveland Clinic (Angio),297,1.14
+Source Dataset,Pima Indians (Lab),768,2.95

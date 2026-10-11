@@ -1,0 +1,55 @@
+policy:
+  description: 'Tri-level clinical risk categorization mapping continuous model probabilities
+    P(y=1) into actionable patient tiers: Low, Medium, and High.
+
+    '
+  calibration_rules:
+    low_tier_cutoff:
+      rule: At least 90% of all true positive patients must fall into Medium or High
+        tiers.
+      clinical_rationale: 'Patients categorized as ''Low Risk'' must have an extremely
+        low probability of disease to prevent dangerous false negatives (clinical
+        triage safety: Sensitivity >= 90%).
+
+        '
+    high_tier_cutoff:
+      rule: The observed disease prevalence in the High Risk tier must be at least
+        2.0x baseline prevalence.
+      clinical_rationale: 'Patients placed in ''High Risk'' must exhibit an actionable
+        concentration of disease (positive predictive lift >= 2.0x) justifying immediate
+        medical diagnostic workups.
+
+        '
+    monotonicity_requirement:
+      rule: 'Observed disease prevalence must strictly follow: Low < Medium < High.'
+tracks:
+  track_a:
+    name: CDC BRFSS Population Survey Track
+    diabetes:
+      baseline_prevalence: 0.1393
+      low_threshold: 0.076
+      high_threshold: 0.279
+      target_high_prevalence_min: 0.2787
+      description: P < 0.076 => Low; 0.076 <= P < 0.279 => Medium; P >= 0.279 => High
+    heart_disease:
+      baseline_prevalence: 0.0942
+      low_threshold: 0.051
+      high_threshold: 0.188
+      target_high_prevalence_min: 0.1884
+      description: P < 0.051 => Low; 0.051 <= P < 0.188 => Medium; P >= 0.188 => High
+  track_b:
+    name: Clinical Laboratory Benchmark Track
+    diabetes:
+      cohort: UCI Pima Indians Diabetes
+      baseline_prevalence: 0.3485
+      low_threshold: 0.223
+      high_threshold: 0.697
+      target_high_prevalence_min: 0.6971
+      description: P < 0.223 => Low; 0.223 <= P < 0.697 => Medium; P >= 0.697 => High
+    heart_disease:
+      cohort: UCI Cleveland Heart Disease
+      baseline_prevalence: 0.4599
+      low_threshold: 0.258
+      high_threshold: 0.92
+      target_high_prevalence_min: 0.9198
+      description: P < 0.258 => Low; 0.258 <= P < 0.920 => Medium; P >= 0.920 => High

@@ -1,0 +1,93 @@
+{
+  "patient_id": "CLIN-LOW-001",
+  "input_features": {
+    "patient_id": "CLIN-LOW-001",
+    "name": "Emily Watson",
+    "Glucose": 88.0,
+    "BloodPressure": 68.0,
+    "BMI": 21.8,
+    "Pregnancies": 1,
+    "Insulin": 45.0,
+    "SkinThickness": 18.0,
+    "DiabetesPedigreeFunction": 0.18,
+    "Age": 28,
+    "age": 28,
+    "sex": 0,
+    "cp": 1,
+    "trestbps": 110.0,
+    "chol": 175.0,
+    "fbs": 0,
+    "restecg": 0,
+    "thalach": 178.0,
+    "exang": 0,
+    "oldpeak": 0.0,
+    "slope": 0,
+    "ca": 0,
+    "thal": 0
+  },
+  "modes_evaluated": [
+    "clinical"
+  ],
+  "predictions": {
+    "clinical": {
+      "diabetes": {
+        "disease": "diabetes",
+        "track": "track_b",
+        "champion_model": "logistic_regression",
+        "calibrated_probability": 0.0271,
+        "risk_tier": "Low",
+        "low_cutoff": 0.223,
+        "high_cutoff": 0.697,
+        "top_risk_increasers": [],
+        "top_risk_decreasers": [
+          {
+            "feature": "Glucose",
+            "raw_value": 88.0,
+            "formatted_reading": "88 mg/dL",
+            "shap_value": -1.0798071078938727
+          },
+          {
+            "feature": "BMI",
+            "raw_value": 21.8,
+            "formatted_reading": "21.8 kg/m\u00b2",
+            "shap_value": -0.9426363127885912
+          }
+        ],
+        "waterfall_plot": "outputs/patient_predictions/CLIN-LOW-001_clinical_track_b_diabetes_waterfall.png"
+      },
+      "heart_disease": {
+        "disease": "heart",
+        "track": "track_b",
+        "champion_model": "logistic_regression",
+        "calibrated_probability": 0.0187,
+        "risk_tier": "Low",
+        "low_cutoff": 0.258,
+        "high_cutoff": 0.92,
+        "top_risk_increasers": [
+          {
+            "feature": "fbs",
+            "raw_value": 0,
+            "formatted_reading": "<=120 mg/dL",
+            "shap_value": 0.006599677366362664
+          }
+        ],
+        "top_risk_decreasers": [
+          {
+            "feature": "age",
+            "raw_value": 28.0,
+            "formatted_reading": "28 years",
+            "shap_value": -0.24780838078528392
+          },
+          {
+            "feature": "cp",
+            "raw_value": 1,
+            "formatted_reading": "Atypical angina",
+            "shap_value": -0.23160467085556866
+          }
+        ],
+        "waterfall_plot": "outputs/patient_predictions/CLIN-LOW-001_clinical_track_b_heart_waterfall.png"
+      }
+    }
+  },
+  "disclaimer": "These are key contributing factors from a statistical model, not proven causes, and this is not a medical diagnosis."
+}

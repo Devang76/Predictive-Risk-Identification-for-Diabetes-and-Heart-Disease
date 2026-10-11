@@ -1,0 +1,5 @@
+Source,Raw_Rows,Rows_Kept,Rows_Lost,Reason
+Pima Indians Diabetes,768,768,0,All clinical records retained with harmonized columns
+Cleveland Heart Disease,297,297,0,All cardiac evaluations retained with harmonized columns
+CDC BRFSS 2015,253680,25000,228680,"Representative stratified sampling (n=25,000) for computational tractability"
+Total Integrated Cohort,254745,26065,228680,Unified harmonized clinical-survey dataset

@@ -1,0 +1,5 @@
+Cohort,Cluster,N,Avg_Age,Avg_Cholesterol_mg_dL,Avg_Resting_BP_mmHg,Avg_Max_HeartRate_bpm,Avg_ST_Depression_mm,Heart_Disease_Rate_Pct,Avg_Glucose_mg_dL,Avg_Insulin_uU_mL,Avg_BMI,Avg_BloodPressure_mmHg,Diabetes_Rate_Pct
+Cleveland Heart Disease (N=297),Cluster 0 (Low Cardiac Risk),130,60.9,262.0,139.6,133.8,1.74,69.2,,,,,
+Cleveland Heart Disease (N=297),Cluster 1 (High Cardiac Risk),167,49.6,236.0,125.6,161.9,0.53,28.1,,,,,
+Pima Indians Diabetes (N=768),Cluster 0 (Normoglycemic Metabolic),435,27.6,,,,,,104.8,114.2,30.0,67.0,17.7
+Pima Indians Diabetes (N=768),Cluster 1 (Hyperglycemic Insulin-Resistant),333,40.7,,,,,,143.7,175.2,35.6,79.4,57.4

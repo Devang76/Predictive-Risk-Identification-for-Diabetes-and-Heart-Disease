@@ -1,0 +1,6 @@
+Min_Support,Frequent_Itemsets,Total_Rules_Lift_ge_1,Diabetes_Targeted_Rules,Heart_Targeted_Rules,Execution_Time_Sec
+0.4,17,24,0,0,0.0024
+0.3,32,48,0,0,0.0027
+0.2,72,166,0,0,0.0041
+0.1,218,1206,2,0,0.0161
+0.05,611,5836,45,17,0.0734

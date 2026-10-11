@@ -1,0 +1,16 @@
+Item_Name,Variable_Type,Source_Variable,Clinical_Threshold,Frequency_Count,Support
+BMI>=30,Threshold-Discretized,BMI,BMI >= 30.0 kg/m² (WHO Clinical Obesity),8814,0.3526
+Age>=50,Threshold-Discretized,Age,Age bracket >= 7 (Chronological Age >= 50),17708,0.7083
+GenHlth_PoorFair,Threshold-Discretized,GenHlth,"GenHlth in {4: Fair, 5: Poor}",4323,0.1729
+Income_Low,Threshold-Discretized,Income,"Income bracket <= 4 (Annual Income < $25,000)",5643,0.2257
+Sex_Male,One-Hot / Category Indicator,Sex,Sex == 1 (Male Respondent),11056,0.4422
+HighBP,Original Binary Indicator,HighBP,Self-reported diagnosed hypertension (HighBP == 1),10834,0.4334
+HighChol,Original Binary Indicator,HighChol,Self-reported high cholesterol (HighChol == 1),10677,0.4271
+Smoker,Original Binary Indicator,Smoker,Smoked >= 100 cigarettes in lifetime (Smoker == 1),11090,0.4436
+PhysActivity,Original Binary Indicator,PhysActivity,Physical activity in past 30 days (PhysActivity == 1),18963,0.7585
+Fruits,Original Binary Indicator,Fruits,Consumes fruit >= 1 time/day (Fruits == 1),15820,0.6328
+Veggies,Original Binary Indicator,Veggies,Consumes vegetables >= 1 time/day (Veggies == 1),20267,0.8107
+DiffWalk,Original Binary Indicator,DiffWalk,Serious difficulty walking/climbing stairs (DiffWalk == 1),4222,0.1689
+Stroke,Original Binary Indicator,Stroke,Ever diagnosed with a stroke (Stroke == 1),1002,0.0401
+Diabetes,Target Binary Consequent,Diabetes_binary,Diagnosed with diabetes or prediabetes (Diabetes_binary == 1),3450,0.138
+HeartDisease,Target Binary Consequent,HeartDiseaseorAttack,Coronary heart disease or heart attack (HeartDisease == 1),2366,0.0946
